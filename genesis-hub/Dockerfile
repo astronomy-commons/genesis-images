@@ -6,6 +6,6 @@ USER root
 COPY spawner.py /usr/local/lib/python3.6/dist-packages/kubespawner/spawner.py
 
 # Customize the logo
-COPY dirac-jupyter-logo.png /usr/local/share/jupyter/hub/static/images/logo.png
+COPY dirac-jupyter-logo.png /usr/local/share/jupyterhub/static/images/jupyterhub-80.png
 
 USER ${NB_USER}

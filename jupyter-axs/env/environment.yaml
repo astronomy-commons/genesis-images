@@ -1,0 +1,35 @@
+name: base
+channels:
+- defaults
+- conda-forge
+dependencies:
+- pip
+- numpy
+- pandas
+- pyarrow
+- tornado
+- dask
+- dask-kubernetes
+- astropy 
+- astroquery
+- scikit-learn 
+- emcee
+- galpy
+- rebound 
+- sunpy 
+- sncosmo 
+- george 
+- celerite 
+- pystan 
+- healpy 
+- astropy-healpix 
+- astroml 
+- tqdm 
+- matplotlib 
+- scipy 
+- seaborn
+- pip:
+  - ztfquery
+  - cesium
+  - nbgitpuller
+  - kubernetes

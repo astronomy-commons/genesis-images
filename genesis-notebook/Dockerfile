@@ -45,3 +45,9 @@ RUN printf '\
 envs_dirs:\n\
   - $HOME/.conda-envs\n\
 ' >> /opt/conda/.condarc
+
+USER $NB_UID
+
+# Machine learning
+
+RUN conda install -c defaults -c conda-forge tensorflow-gpu

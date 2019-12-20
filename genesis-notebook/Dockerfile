@@ -49,5 +49,12 @@ envs_dirs:\n\
 USER $NB_UID
 
 # Machine learning
-
 RUN conda install -c defaults -c conda-forge tensorflow-gpu
+RUN conda install -c defaults -c conda-forge pymc3
+RUN conda install -c defaults -c conda-forge pytorch-gpu tensorflow-gpu conda-forge::blas=*=mkl
+
+# bash completions & jq
+USER root
+RUN sudo apt-get update && sudo apt-get install --yes bash-completion jq
+
+USER $NB_UID

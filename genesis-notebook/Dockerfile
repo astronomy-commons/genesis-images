@@ -49,7 +49,7 @@ envs_dirs:\n\
 USER $NB_UID
 
 # Machine learning
-RUN conda install -c defaults -c conda-forge tensorflow-gpu
+#RUN conda install -c defaults -c conda-forge tensorflow-gpu
 RUN conda install -c defaults -c conda-forge pymc3
 RUN conda install -c defaults -c conda-forge pytorch-gpu tensorflow-gpu conda-forge::blas=*=mkl
 
@@ -57,4 +57,10 @@ RUN conda install -c defaults -c conda-forge pytorch-gpu tensorflow-gpu conda-fo
 USER root
 RUN sudo apt-get update && sudo apt-get install --yes bash-completion jq
 
+# LaTeX
+#RUN sudo apt-get update && sudo apt-get install --yes texlive-full
+
 USER $NB_UID
+
+# for the astroML demo
+RUN pip install googledrivedownloader
